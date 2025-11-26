@@ -1,0 +1,72 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Angello" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="557" leftMargin="19" rightMargin="19" topMargin="20" bottomMargin="20" uuid="62157859-6903-4601-ae34-094596324ace">
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Angello"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="ZGJhbmdlbGxvLmRhdG9zX21ldG9kb3NfcGFnbyBBUyAsMzQsNDEsMDU2OTJiMmItZGU2OC00MTlh&#xa;LTg5NzMtOGY0NWE3Y2M5ZDVmOw=="/>
+	<query language="sql"><![CDATA[SELECT `idMetodoPago`,
+	nombre
+FROM dbangello.datos_metodos_pago]]></query>
+	<field name="idMetodoPago" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idMetodoPago"/>
+		<property name="com.jaspersoft.studio.field.label" value="idMetodoPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_metodos_pago"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="datos_metodos_pago"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="70" splitType="Stretch">
+		<element kind="rectangle" uuid="955d7798-a0fe-4617-85c9-1472cbcd9c61" x="70" y="10" width="451" height="41" forecolor="#030303" backcolor="#3525E6"/>
+		<element kind="staticText" uuid="c71d68eb-0631-45df-83d5-38fdc88cefcc" x="170" y="15" width="250" height="30" forecolor="#FFFFFF" fontSize="19.0" bold="true">
+			<text><![CDATA[Metodo de Pago - Angello]]></text>
+		</element>
+		<element kind="image" uuid="7de80c7b-7592-4199-8a1e-4fe08bf0f452" x="-1" y="1" width="70" height="65">
+			<expression><![CDATA["D:/Descargas/unnamed-removebg-preview.png"]]></expression>
+		</element>
+	</title>
+	<columnHeader height="48" splitType="Stretch">
+		<element kind="rectangle" uuid="1451378f-da3f-41c8-9f8c-865e230fd49e" x="-4" y="4" width="561" height="31" backcolor="#3529E3"/>
+		<element kind="staticText" uuid="9a393d00-b08e-4bf8-9f87-11b8aeafa552" x="0" y="5" width="279" height="30" forecolor="#FFFFFF" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[ID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ce863ff7-4353-4fdf-a96a-56d812837146"/>
+		</element>
+		<element kind="staticText" uuid="15dae44a-b503-4a2b-a7e1-414c827ba97a" x="279" y="5" width="278" height="30" forecolor="#FFFFFF" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Metodo de Pago]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="327ccb13-7ed8-4115-b392-eb6eb9fc05da"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="2020677b-2d74-4139-a188-ed0c1fa6df48" x="0" y="0" width="279" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{idMetodoPago}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ce863ff7-4353-4fdf-a96a-56d812837146"/>
+			</element>
+			<element kind="textField" uuid="41712535-6ecc-45f2-85f0-f9c85de9e8ea" x="279" y="0" width="278" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="327ccb13-7ed8-4115-b392-eb6eb9fc05da"/>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="44" splitType="Stretch">
+		<element kind="textField" uuid="205e5643-59ef-4da8-8523-aaaec86d8db0" x="180" y="14" width="120" height="30" fontSize="12.0" hTextAlign="Right">
+			<expression><![CDATA["Page " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="40517eb8-a1d4-4977-a5d4-08f877afb610" x="300" y="14" width="120" height="30" fontSize="12.0" evaluationTime="Report" hTextAlign="Left">
+			<expression><![CDATA[" of " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="line" uuid="04da3c93-deb0-4c78-b07e-1b054fda79d3" x="0" y="4" width="557" height="1"/>
+		<element kind="staticText" uuid="e23d6f3b-8ba5-4d09-a107-16b660babddc" x="18" y="14" width="152" height="30" fontSize="15.0" bold="true">
+			<text><![CDATA[Angello | Company]]></text>
+		</element>
+	</pageFooter>
+</jasperReport>
